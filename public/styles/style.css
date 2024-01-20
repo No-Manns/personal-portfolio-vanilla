@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;500;600;700;800&display=swap");
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #f9fdff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  height: 100vh;
+  background: var(--bg-black-900);
+  padding: 0 3rem;
+  display: block;
+  /* position: fixed;
+  left: 27rem; */
+  top: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.section .container {
+  padding-top: 6rem;
+  padding-bottom: 7rem;
+}
+
+.section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  /* background: red; */
+}
+
+.section-title h2 {
+  font-size: 4rem;
+  color: var(--text-black-900);
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  height: 0.4rem;
+  width: 5rem;
+  top: 100%;
+  left: 0;
+  background: var(--skin-clr);
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  height: 0.4rem;
+  width: 2.5rem;
+  top: 100%;
+  left: 0;
+  margin-top: 0.8rem;
+  background: var(--skin-clr);
+}
+
+.main-content {
+  padding-left: 27rem;
+}
+
+.padd-15 {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  /* background: red; */
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  position: relative;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 4rem;
+  background: var(--skin-clr);
+  padding: 1.2rem 3.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  transition: all 0.35s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ASIDE */
+.aside {
+  width: 27rem;
+  height: 100%;
+  background: var(--bg-black-100);
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 0.1rem solid var(--bg-black-50);
+}
+.aside .logo {
+  position: absolute;
+  text-transform: capitalize;
+  top: 5rem;
+  font-size: 3rem;
+  /* position: relative; */
+}
+
+.aside .logo a {
+  color: var(--text-black-900);
+  font-weight: 700;
+  /* background: red; */
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  position: relative;
+}
+
+.aside .logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 4rem;
+}
+
+.aside .logo a::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 0.5rem solid var(--skin-clr);
+  border-left: 0.5rem solid var(--skin-clr);
+  left: 0;
+  bottom: 0;
+}
+
+.aside .logo a::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-top: 0.5rem solid var(--skin-clr);
+  border-right: 0.5rem solid var(--skin-clr);
+  right: 0;
+  top: 0;
+}
+
+.aside .nav-toggler {
+  height: 4rem;
+  width: 4.5rem;
+  border: 0.1rem solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  left: 30rem;
+  top: 2rem;
+  background: var(--bg-black-100);
+  border-radius: 0.5rem;
+
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside .nav-toggler span {
+  height: 0.2rem;
+  width: 1.8rem;
+  background: var(--skin-clr);
+  display: inline-block;
+  position: relative;
+}
+
+.aside .nav-toggler span::before {
+  content: "";
+  height: 0.2rem;
+  width: 1.8rem;
+  background: var(--skin-clr);
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+}
+.aside .nav-toggler span::after {
+  content: "";
+  height: 0.2rem;
+  width: 1.8rem;
+  background: var(--skin-clr);
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+}
+
+.aside .nav {
+  margin-top: 3rem;
+}
+
+.aside .nav li {
+  margin-bottom: 2rem;
+  /* background: red; */
+  display: block;
+}
+
+.aside .nav li a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: block;
+  color: var(--text-black-900);
+  padding: 0.5rem 1.5rem;
+
+  border-bottom: 0.1rem solid var(--bg-black-50);
+}
+
+.aside .nav li a.active {
+  color: var(--skin-clr);
+}
+
+.aside .nav li a i {
+  margin-right: 1.5rem;
+}
+
+/* HOME */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+}
+.home .home-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+h3.hello {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+}
+h3.hello span {
+  font-family: "Clicker Script", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--skin-clr);
+}
+h3.my-profession {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+}
+.typing {
+  color: var(--skin-clr);
+}
+.home-info p {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--text-black-900);
+}
+.home .home-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  /* background: red; */
+  position: relative;
+  text-align: center;
+}
+
+.home .home-img::after {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  right: 2rem;
+  bottom: -4rem;
+  border-bottom: 1rem solid var(--skin-clr);
+  border-right: 1rem solid var(--skin-clr);
+}
+.home .home-img::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  left: 2rem;
+  top: -4rem;
+  border-left: 1rem solid var(--skin-clr);
+  border-top: 1rem solid var(--skin-clr);
+}
+.home .home-img img {
+  height: 40rem;
+  margin: auto;
+  border-radius: 0.5rem;
+}
